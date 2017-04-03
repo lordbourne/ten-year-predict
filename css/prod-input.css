@@ -1,0 +1,19 @@
+header {
+  text-align: center;
+}
+header img {
+  width: 50%;
+}
+main table tr {
+  border-bottom: 1px solid #bbb;
+}
+main table td {
+  padding: 10px 10px;
+  font-size: 34px;
+}
+main table input {
+  height: 45px;
+  border-radius: 5px;
+  font-size: 34px;
+  width: 150px;
+}

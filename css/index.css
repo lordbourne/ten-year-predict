@@ -1,0 +1,25 @@
+.wrap {
+  margin-top: 70px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.pic-title {
+  text-align: center;
+}
+.pic-main {
+  text-align: center;
+}
+.start {
+  margin-top: 15px;
+  text-align: center;
+}
+.start a {
+  display: inline-block;
+  width: 65px;
+  line-height: 65px;
+  background-color: #39c5d0;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+}

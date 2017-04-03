@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>请填写生产力参数</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/para-input.css">
+  <!-- <link rel="stylesheet" href="css/prod-input.css"> -->
+</head>
+<body>
+  <header>
+    <img src="img/para-input.png" alt="">
+  </header>
+  <main>
+    <form id="form">
+      <table>
+        <caption>
+          请输入您的测算参数
+        </caption>
+        <tr>
+          <td>月实动人均件数</td>
+          <td><input name="rjjs" type="number"></td>
+          <td>(建议值:1-20)</td>
+        </tr>
+        <tr>
+          <td>件均保费</td>
+          <td><input name="jjbf" type="number"></td>
+          <td>(建议值:1000-100000)</td>
+        </tr>
+        <tr>
+          <td>佣金率</td>
+          <td><input name="yjl" type="number">  %</td>
+          <td>(建议值:25%)</td>
+        </tr>
+        <tr>
+          <td>开单率</td>
+          <td><input name="kdl" type="number">  %</td>
+          <td>(建议值:70%)</td>
+        </tr>
+        <tr>
+          <td>您个人月首佣</td>
+          <td><input name="sy" type="number"></td>
+          <td>(建议值:1000-1000万)</td>
+        </tr>
+      </table>
+
+    </form>
+  </main>
+
+  <footer>
+    <a class="btn" id="setdata" href="prod-data.html">开始测算</a>
+  </footer>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/prod-input.js"></script>
+</body>
+</html>

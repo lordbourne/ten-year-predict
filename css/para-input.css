@@ -1,0 +1,32 @@
+/*
+预测参数输入页面的样式
+*/
+header {
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+header img {
+  width: 50%;
+}
+main {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+main form table {
+  width: 80%;
+}
+main form table caption {
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+main form table input {
+  height: 45px;
+  border-radius: 5px;
+  font-size: 34px;
+  max-width: 150px;
+}
+footer {
+  padding-top: 20px;
+  text-align: center;
+}

@@ -1,0 +1,20 @@
+{
+  "info": {
+    "l_agntnum": "05010196",
+    "l_agntname": "周明方",
+    "l_agtype": "AD",
+    "l_agntdate": "2000 年 4 月 1 日"
+  },
+  "team": {
+    "zxzrs": 29,
+    "zxbrs": 77,
+    "sxrs": 77,
+    "zxas": 3,
+    "zxss": 1,
+    "zxum": 0,
+    "zxad": 0
+  },
+  "income": {
+    "l_nsr": 1481719.66
+  }
+}

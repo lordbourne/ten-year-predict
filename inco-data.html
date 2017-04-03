@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>收入情况</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/inco-data.css">
+</head>
+<body>
+  <div class="container" id="container">
+    <header>
+      <p class="income-info">
+        您最近一年的总收入
+      </p>
+      <h1 class="income">
+        <span data-nsr></span> 万元
+      </h1>
+    </header>
+    <main>
+      <div class="main-inner">
+        <section class="myinfo">
+          <h1>我的信息</h1>
+          <ul>
+            <li>工&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<span data-agntnum></span></li>
+            <li>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<span data-agntname></span></li>
+            <li>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级：<span data-agtype></span></li>
+            <li>入司时间：<span data-dteapp></span></li>
+          </ul>
+        </section>
+        <section class="myteam">
+          <h1>我的团队</h1>
+          <ul>
+            <li>直辖组现有人力<span data-zxzrs></span>人</li>
+            <li>直辖部现有人力<span data-zxbrs></span>人</li>
+            <li>所辖人力<span data-sxrs></span>人</li>
+            <li>直辖主管数：直辖<span data-zxas></span>个AS，<span data-zxss></span>个SS，<span data-zxum></span>个UM，同级育成<span data-zxad></span>个AD</li>
+          </ul>
+        </section>
+        <p class="note">
+          说明：以上直辖主管数中，若直辖职级与您当前职级一致，系统自动显示为您的同级育成主管数。
+        </p>
+      </div>
+
+    </main>
+    <address class="predict">
+      <p>您对目前的收入满意吗？让我们一起来预测一下未来 10 年组织发展带来的收入吧!</p>
+      <a href="recr-input.html">follow me >></a>
+    </address>
+
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/inco-data.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>增员测算</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/para-input.css">
+  <link rel="stylesheet" href="css/recr-input.css">
+</head>
+<body>
+  <!-- <header>
+    <div class="line">
+    </div>
+    <ul class="text clearfix">
+      <li class="pre1 first active">
+        增员测算
+        <div class="ball"></div>
+        <div class="line"></div>
+        </li>
+      </div>
+      <li class="pre2 last">
+        生产力测算
+        <div class="ball"></div>
+        <div class="line"></div>
+        </li>
+      </div>
+    </ul>
+  </header> -->
+  <header>
+    <img src="img/recr-input.png" alt="">
+  </header>
+  <main>
+    <form id="form">
+      <table>
+        <caption>
+          请输入您的测算参数
+        </caption>
+        <tr>
+          <td>每年个人直接增员</td>
+          <td><input name="zjzy" type="number">  人</td>
+          <td>（区间：1-50人）</td>
+        </tr>
+        <tr>
+          <td>13个月留存率</td>
+          <td><input name="lcv13" type="number">  %</td>
+          <td>（区间：0%-100%）</td>
+        </tr>
+        <tr>
+          <td>25个月留存率</td>
+          <td><input name="lcv25" type="number">  %</td>
+          <td>（区间：0%-100%）</td>
+        </tr>
+        <tr>
+          <td>10年后团队组均人力</td>
+          <td><input name="zjrl" type="number">  人</td>
+          <td>（区间：1-50人）</td>
+        </tr>
+      </table>
+
+    </form>
+  </main>
+
+  <footer>
+    <a class="btn" id="setdata" href="recr-data.html">增员测算</a>
+  </footer>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/recr-input.js"></script>
+</body>
+</html>
