@@ -70,7 +70,7 @@ $(document).ready(function() {
 
   // 数据填充
   $('#rank').html(localStorage.getItem('rank'));
-  $('#total').html(localStorage.getItem('total'));
+  $('#hj').html(localStorage.getItem('hj'));
   $('#hj1').html(localStorage.getItem('hj1'));
   $('#m_um').html(localStorage.getItem('m_um'));
   $('#hj2').html(localStorage.getItem('hj2'));
