@@ -66,7 +66,7 @@ $(document).ready(function() {
   // 求和并转换
   var sumConv = function (arr, from, to) {
     return conv(sum(arr, from, to));
-  }
+  };
 
   // 组织利益合计
   hb[13] = sumConv(hb, 1, 9);
