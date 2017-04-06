@@ -7,6 +7,9 @@
   <title>您目前的收入情况</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/inco-input.css">
+  <!-- flatui -->
+  <link href="flatui/dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="flatui/dist/css/flat-ui.css" rel="stylesheet">
 </head>
 <body>
   <header class="income">
@@ -14,14 +17,23 @@
   </header>
 
   <section class="code-form clearfix">
-      <div class="input-wrap">
-        <input id="agntnum-input" name="agntnum" type="text" placeholder="请输入编码">
-      </div>
-      <a class="button" id="setdata" href="inco-data.html">走起</a>
+    <div class="form-group">
+      <div class="input-group">
+        <input class="form-control" id="agntnum-input" name="agntnum" type="text" placeholder="请输入编码">
+        <span class="input-group-btn">
+          <button id="setdata" class="btn btn-default" type="button">走起>></button>
+        </span>
+      </div><!-- /input-group -->
+    </div>
   </section>
 
 
   <script src="js/jquery.js"></script>
   <script src="js/inco-input.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="flatui/dist/js/flat-ui.min.js"></script>
+  <script src="flatui/docs/assets/js/application.js"></script>
 </body>
 </html>
+
+

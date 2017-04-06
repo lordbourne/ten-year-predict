@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width= , user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>生产力预测</title>
+  <link href="flatui/dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/buttons.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/prod-data.css">
 </head>
@@ -18,7 +21,7 @@
 
   <section id="zxb">
     <h2>直辖部月产能情况</h2>
-    <table >
+    <table class="table table-striped">
       <thead>
         <tr>
           <td colspan="2">组织架构</td>
@@ -61,7 +64,7 @@
 
   <section id="ycb">
     <h2>育成部月产能情况</h2>
-    <table>
+    <table class="table table-striped">
       <thead>
         <tr>
           <td>组织架构</td>
@@ -86,8 +89,10 @@
   </section>
 
   <footer>
-    <a class="btn" href="ad-data.html">AD 收入演算</a>
-    <a class="btn" href="um-data.html">UM 收入演算</a>
+    <div class="button-group">
+      <a class="button button-action button-pill button-raised" id="setdata1" href="ad-data.html">AD 收入演算</a>
+      <a class="button button-action button-pill button-raised" id="setdata2" href="um-data.html">UM 收入演算</a>
+    </div>
   </footer>
 
   <script src="js/jquery.js"></script>

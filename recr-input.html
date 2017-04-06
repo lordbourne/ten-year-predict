@@ -1,71 +1,129 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width= , user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>增员测算</title>
+  <link href="flatui/dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/buttons.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/para-input.css">
   <link rel="stylesheet" href="css/recr-input.css">
 </head>
+
 <body>
-  <!-- <header>
-    <div class="line">
-    </div>
-    <ul class="text clearfix">
-      <li class="pre1 first active">
-        增员测算
-        <div class="ball"></div>
-        <div class="line"></div>
-        </li>
-      </div>
-      <li class="pre2 last">
-        生产力测算
-        <div class="ball"></div>
-        <div class="line"></div>
-        </li>
-      </div>
-    </ul>
-  </header> -->
+  </header>
   <header>
     <img src="img/recr-input.png" alt="">
   </header>
   <main>
-    <form id="form">
-      <table>
-        <caption>
-          请输入您的测算参数
-        </caption>
-        <tr>
-          <td>每年个人直接增员</td>
-          <td><input name="zjzy" type="number">  人</td>
-          <td>（区间：1-50人）</td>
-        </tr>
-        <tr>
-          <td>13个月留存率</td>
-          <td><input name="lcv13" type="number">  %</td>
-          <td>（区间：0%-100%）</td>
-        </tr>
-        <tr>
-          <td>25个月留存率</td>
-          <td><input name="lcv25" type="number">  %</td>
-          <td>（区间：0%-100%）</td>
-        </tr>
-        <tr>
-          <td>10年后团队组均人力</td>
-          <td><input name="zjrl" type="number">  人</td>
-          <td>（区间：1-50人）</td>
-        </tr>
-      </table>
+    <table class="table table-striped" id="data-input">
+      <caption>
+        请输入您的测算参数
+      </caption>
+      <tr>
+        <td>每年个人直接增员</td>
+        <td>
+          <input name="zjzy" type="number"> 人</td>
+        <td>（区间：1-50人）</td>
+      </tr>
+      <tr>
+        <td>13个月留存率</td>
+        <td>
+          <input name="lcv13" type="number"> %</td>
+        <td>（区间：0%-100%）</td>
+      </tr>
+      <tr>
+        <td>25个月留存率</td>
+        <td>
+          <input name="lcv25" type="number"> %</td>
+        <td>（区间：0%-100%）</td>
+      </tr>
+      <tr>
+        <td>10年后团队组均人力</td>
+        <td>
+          <input name="zjrl" type="number"> 人</td>
+        <td>（区间：1-50人）</td>
+      </tr>
+    </table>
 
-    </form>
+    <!-- 不用 table 的版本 -->
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <form class="form-inline">
+            <div class="form-group">
+              <label class="sr-only"></label>
+              <p class="form-control-static">每年个人直接增员</p>
+            </div>
+
+            <div class="form-group">
+              <label for="inputPassword2" class="sr-only"></label>
+              <input type="password" class="form-control" id="inputPassword2" placeholder="">
+            </div>
+
+            <span>（区间：1-50人）</span>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <form class="form-inline">
+            <div class="form-group">
+              <label class="sr-only"></label>
+              <p class="form-control-static">每年个人直接增员</p>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword2" class="sr-only"></label>
+              <input type="password" class="form-control" id="inputPassword2" placeholder="">
+            </div>
+            <span>（区间：0%-100%）</span>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <form class="form-inline">
+            <div class="form-group">
+              <label class="sr-only"></label>
+              <p class="form-control-static">13个月留存率</p>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword2" class="sr-only"></label>
+              <input type="password" class="form-control" id="inputPassword2" placeholder="">
+            </div>
+
+            <span>（区间：1-50人）</span>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <form class="form-inline">
+            <div class="form-group">
+              <label class="sr-only"></label>
+              <p class="form-control-static">每年个人直接增员</p>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword2" class="sr-only"></label>
+              <input type="password" class="form-control" id="inputPassword2" placeholder="">
+            </div>
+            <span>（区间：1-50人）</span>
+          </form>
+        </div>
+      </div>
+    </div> -->
+
+
   </main>
-
   <footer>
-    <a class="btn" id="setdata" href="recr-data.html">增员测算</a>
+    <a class="button button-action button-pill" id="setdata" href="recr-data.html">增员测算</a>
   </footer>
 
   <script src="js/jquery.js"></script>
   <script src="js/recr-input.js"></script>
 </body>
+
 </html>
