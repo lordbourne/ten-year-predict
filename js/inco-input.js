@@ -4,9 +4,15 @@ $(document).ready(function() {
     return localStorage.getItem($(this).attr('name'));
   });
   $('#setdata').click(function(event) {
-    var $agntnum = $('#agntnum-input');
-    localStorage.setItem('agntnum', $agntnum.val());
-    window.location.href="inco-data.html";
+    var agntnum = $('#agntnum-input').val();
+    var reg = /^[0-9]{8}$/;
+    if (!reg.test(agntnum)) {// 输入不合法
+      alert('请输入正确的数值：8 位数字');// todo: 这里要加个特效
+    } else {// 输入合法
+      // todo: 数据库查不到记录的操作
+      localStorage.setItem('agntnum', agntnum);
+      gotoNextPage(this);
+    }
   });
 });
 

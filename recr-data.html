@@ -16,14 +16,15 @@
   </header>
 
   <section>
-    <h1>您的职级为 <span id="rank" data-rank></span>，团队总人数达到 <span id="hj" data-hj></span> 人</h1>
+    <h1>您的职级为 <span class="txt-data" id="rank" data-rank></span></h1>
+    <h1>团队总人数达到 <span class="txt-data" id="hj" data-hj></span> 人</h1>
   </section>
 
   <section id="zxb">
-    <h2>
+    <h2 class="tbl-caption">
       直辖部增员情况
     </h2>
-    <table class="table table-striped">
+    <table class="table">
       <tr>
         <td colspan="2">直辖组</td>
         <td ><span data-m_zxzrs>24</span>人</td>
@@ -47,22 +48,22 @@
         <td><span data-zjrl></span>人x<span data-ss_as></span>组 = <span data-zjrl-mult-ss_as></span>人</td>
       </tr>
     </table>
-    <p>直辖部共计 <span id="hj1" data-hj1></span> 人</p>
+    <p>直辖部共计 <span class="txt-data" id="hj1" data-hj1></span> 人</p>
   </section>
 
   <section id="ycb">
-    <h2>育成部增员情况</h2>
-    <table class="table table-striped">
+    <h2 class="tbl-caption">育成部增员情况</h2>
+    <table class="table">
       <tr>
         <td>直辖组</td>
         <td><span data-zjrl></span>人x<span data-m_um></span>部 = <span data-m_um-mult-15></span>人</td>
       </tr>
       <tr>
         <td>育成组</td>
-        <td><span data-zjrl></span>人×9组×<span data-m_um></span>部=<span data-zjrl-mult-9-mult-m_um></span>人</td>
+        <td><span data-zjrl></span>人×9组×<span data-m_um></span>部=<span data-um_um></span>人</td>
       </tr>
     </table>
-    <p>育成部共 <span id="m_um" data-m_um></span> 部，共计 <span id="hj2" data-hj2></span> 人</p>
+    <p>育成部共 <span class="txt-data" id="m_um" data-m_um></span> 部，共计 <span class="txt-data" id="hj2" data-hj2></span> 人</p>
   </section>
 
   <footer>
@@ -70,6 +71,7 @@
   </footer>
 
   <script src="js/jquery.js"></script>
+  <script src="js/common.js"></script>
   <script src="js/recr-data.js"></script>
 </body>
 </html>

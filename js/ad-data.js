@@ -1,17 +1,17 @@
 $(document).ready(function() {
-  var f_zxz = parseInt(localStorage.getItem('zxzrs'));
-  var f_m_as = parseInt(localStorage.getItem('m_as'));
+  var f_zxz   = parseInt(localStorage.getItem('zxzrs'));
+  var f_m_as  = parseInt(localStorage.getItem('m_as'));
   var f_as_as = parseInt(localStorage.getItem('as_as'));
-  var f_m_ss = parseInt(localStorage.getItem('m_ss'));
+  var f_m_ss  = parseInt(localStorage.getItem('m_ss'));
   var f_ss_as = parseInt(localStorage.getItem('ss_as'));
-  var f_hj1 = parseInt(localStorage.getItem('hj1'));
-  var f_m_um = parseInt(localStorage.getItem('m_um'));
+  var f_hj1   = parseInt(localStorage.getItem('hj1'));
+  var f_m_um  = parseInt(localStorage.getItem('m_um'));
   var f_um_um = parseInt(localStorage.getItem('um_um'));
-  var f_hj2 = parseInt(localStorage.getItem('hj2'));
-  var f_hj = parseInt(localStorage.getItem('hj'));
-  var f_sy = parseInt(localStorage.getItem('sy'));
+  var f_hj2   = parseInt(localStorage.getItem('hj2'));
+  var f_hj    = parseInt(localStorage.getItem('hj'));
+  var f_sy    = parseInt(localStorage.getItem('sy'));
 
-  var nsr = parseInt(localStorage.getItem('nsr')) / 10000;
+  var nsr     = parseInt(localStorage.getItem('nsr')) / 10000;
 
   var h = new Array(14),
       hb = new Array(14),
@@ -71,7 +71,6 @@ $(document).ready(function() {
   // 组织利益合计
   hb[13] = sumConv(hb, 1, 9);
   hc[13] = sumConv(hb, 1, 9);
-  $h.siblings().filter(':eq(0)').html(hb[i]);
   $('#h13').find('span[data-h13_m]').html(hb[13]);
   $('#h13').find('span[data-h13_y]').html(hc[13]);
 

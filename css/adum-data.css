@@ -2,18 +2,20 @@ header {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
-  border-bottom: 5px solid #ddd;
+  border-bottom: 3px solid #ccc;
 }
 header img {
   width: 70%;
 }
 section {
-  border-bottom: 5px solid #ddd;
+  border-bottom: 3px solid #ccc;
 }
 section h1 {
   text-align: center;
-  font-size: 25px;
-  font-weight: normal;
+  font-size: 20px;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 section p {
   text-align: center;
@@ -26,6 +28,9 @@ section p {
 }
 footer {
   text-align: center;
+  padding-bottom: 25px;
+}
+footer p {
   color: #aaa;
   padding-top: 10px;
   padding-bottom: 10px;

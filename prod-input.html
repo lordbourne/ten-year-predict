@@ -16,34 +16,29 @@
     <img src="img/para-input.png" alt="">
   </header>
   <main>
-    <table class="table table-striped" id="data-input">
+    <table class="table" id="data-input">
       <caption>
         请输入您的测算参数
       </caption>
       <tr>
         <td>月实动人均件数</td>
-        <td><input name="rjjs" type="number"></td>
-        <td>(建议值:1-20)</td>
+        <td><input name="rjjs" type="number" placeholder="建议值:1-20"></td>
       </tr>
       <tr>
         <td>件均保费</td>
-        <td><input name="jjbf" type="number"></td>
-        <td>(建议值:1000-100000)</td>
+        <td><input name="jjbf" type="number" placeholder="建议值:1000-100000"></td>
       </tr>
       <tr>
         <td>佣金率</td>
-        <td><input name="yjl" type="number">  %</td>
-        <td>(建议值:25%)</td>
+        <td><input name="yjl" type="number" placeholder="建议值:25%">  %</td>
       </tr>
       <tr>
         <td>开单率</td>
-        <td><input name="kdl" type="number">  %</td>
-        <td>(建议值:70%)</td>
+        <td><input name="kdl" type="number" placeholder="建议值:70%">  %</td>
       </tr>
       <tr>
         <td>您个人月首佣</td>
-        <td><input name="sy" type="number"></td>
-        <td>(建议值:1000-1000万)</td>
+        <td><input name="sy" type="number" placeholder="建议值:1000-1000万"></td>
       </tr>
     </table>
   </main>
@@ -53,6 +48,7 @@
   </footer>
 
   <script src="js/jquery.js"></script>
+  <script src="js/common.js"></script>
   <script src="js/prod-input.js"></script>
 </body>
 </html>

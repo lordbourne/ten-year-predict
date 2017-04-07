@@ -2,7 +2,7 @@ header {
   text-align: center;
   background: #fff;
   padding-bottom: 10px;
-  border-bottom: 5px solid #eee;
+  border-bottom: 3px solid #ccc;
 }
 header p {
   padding-top: 10px;
@@ -14,17 +14,38 @@ header h1 {
   color: #555;
 }
 section {
-  border-bottom: 5px solid #eee;
+  border-bottom: 3px solid #ccc;
 }
 section h1 {
   font-size: 25px;
   color: #555;
   font-weight: normal;
-  padding-left: 10px;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
 }
 section .note {
   color: #777;
   text-align: center;
+}
+.myinfo table {
+  border-bottom: none;
+}
+.myinfo table tr td:nth-child(1) {
+  padding-left: 30px;
+}
+.myinfo table tr:nth-child(odd) {
+  background-color: #DEF3CA;
+}
+.myteam table tr:nth-child(odd) {
+  background-color: #DEF3CA;
+}
+.myteam table tr:nth-child(-n+4) td:nth-child(1) {
+  padding-left: 30px;
+}
+.myteam table tr:nth-child(4) td:nth-child(1) {
+  vertical-align: middle;
 }
 footer {
   padding-top: 20px;

@@ -75,7 +75,6 @@ $(document).ready(function() {
   // 组织利益合计
   hb[13] = sumConv(hb, 1, 9);
   hc[13] = sumConv(hb, 1, 9);
-  $h.siblings().filter(':eq(0)').html(hb[i]);
   $('#h13').find('span[data-h13_m]').html(hb[13]);
   $('#h13').find('span[data-h13_y]').html(hc[13]);
 
