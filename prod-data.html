@@ -3,22 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width= , user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>生产力预测</title>
+  <link href="flatui/dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/buttons.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/prod-data.css">
 </head>
 <body>
   <header>
-    <h1>十年后团队月产能情况</h1>
+    <p>十年后团队月产能情况</p>
   </header>
 
   <section>
-    <h2>总人力达到 <span id="hj" data-hj></span> 人, 组织FYC达到 <span id="hj_fyc" data-hj_fyc></span> 万元</h2>
+    <h2>总人力达到 <span class="txt-data" id="hj" data-hj></span> 人</h2><h2>组织FYC达到 <span class="txt-data" id="hj_fyc" data-hj_fyc></span> 万元</h2>
   </section>
 
-  <section>
-    <h2>直辖部月产能情况</h2>
-    <table >
+  <section id="zxb">
+    <h2 class="tbl-caption">直辖部月产能情况</h2>
+    <table class="table">
       <thead>
         <tr>
           <td colspan="2">组织架构</td>
@@ -56,12 +59,12 @@
         </tr>
       </tbody>
     </table>
-    <p>直辖部总人力为 <span id="hj1" data-hj1></span> 人，组织FYC为 <span id="hj1_fyc" data-hj1_fyc></span> 万元</p>
+    <p>直辖部总人力为 <span class="txt-data" id="hj1" data-hj1></span> 人，组织FYC为 <span class="txt-data" id="hj1_fyc" data-hj1_fyc></span> 万元</p>
   </section>
 
-  <section>
-    <h2>育成部月产能情况</h2>
-    <table>
+  <section id="ycb">
+    <h2 class="tbl-caption">育成部月产能情况</h2>
+    <table class="table">
       <thead>
         <tr>
           <td>组织架构</td>
@@ -82,12 +85,18 @@
         </tr>
       </tbody>
     </table>
-    <p>育成部总人力为 <span id="hj2" data-hj2></span> 人，组织 FYC 为 <span id="hj2_fyc" data-hj2_fyc></span> 万元</p>
+    <p>育成部总人力为 <span class="txt-data" id="hj2" data-hj2></span> 人，组织 FYC 为 <span class="txt-data" id="hj2_fyc" data-hj2_fyc></span> 万元</p>
   </section>
 
   <footer>
-    <a class="btn" href="ad-data.html">AD 收入演算</a>
-    <a class="btn" href="um-data.html">UM 收入演算</a>
+    <div class="button-group">
+      <a class="button button-action button-pill button-raised" id="setdata1" href="ad-data.html">AD 收入演算</a>
+      <a class="button button-action button-pill button-raised" id="setdata2" href="um-data.html">UM 收入演算</a>
+    </div>
   </footer>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/prod-data.js"></script>
 </body>
 </html>

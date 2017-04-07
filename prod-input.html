@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width= , user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>请填写生产力参数</title>
+  <link href="flatui/dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/buttons.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/para-input.css">
   <!-- <link rel="stylesheet" href="css/prod-input.css"> -->
@@ -13,46 +16,39 @@
     <img src="img/para-input.png" alt="">
   </header>
   <main>
-    <form id="form">
-      <table>
-        <caption>
-          请输入您的测算参数
-        </caption>
-        <tr>
-          <td>月实动人均件数</td>
-          <td><input name="rjjs" type="number"></td>
-          <td>(建议值:1-20)</td>
-        </tr>
-        <tr>
-          <td>件均保费</td>
-          <td><input name="jjbf" type="number"></td>
-          <td>(建议值:1000-100000)</td>
-        </tr>
-        <tr>
-          <td>佣金率</td>
-          <td><input name="yjl" type="number">  %</td>
-          <td>(建议值:25%)</td>
-        </tr>
-        <tr>
-          <td>开单率</td>
-          <td><input name="kdl" type="number">  %</td>
-          <td>(建议值:70%)</td>
-        </tr>
-        <tr>
-          <td>您个人月首佣</td>
-          <td><input name="sy" type="number"></td>
-          <td>(建议值:1000-1000万)</td>
-        </tr>
-      </table>
-
-    </form>
+    <table class="table" id="data-input">
+      <caption>
+        请输入您的测算参数
+      </caption>
+      <tr>
+        <td>月实动人均件数</td>
+        <td><input name="rjjs" type="number" placeholder="建议值:1-20"></td>
+      </tr>
+      <tr>
+        <td>件均保费</td>
+        <td><input name="jjbf" type="number" placeholder="建议值:1000-100000"></td>
+      </tr>
+      <tr>
+        <td>佣金率</td>
+        <td><input name="yjl" type="number" placeholder="建议值:25%">  %</td>
+      </tr>
+      <tr>
+        <td>开单率</td>
+        <td><input name="kdl" type="number" placeholder="建议值:70%">  %</td>
+      </tr>
+      <tr>
+        <td>您个人月首佣</td>
+        <td><input name="sy" type="number" placeholder="建议值:1000-1000万"></td>
+      </tr>
+    </table>
   </main>
 
   <footer>
-    <a class="btn" id="setdata" href="prod-data.html">开始测算</a>
+    <a class="button button-action button-pill" id="setdata" href="prod-data.html">开始测算</a>
   </footer>
 
   <script src="js/jquery.js"></script>
+  <script src="js/common.js"></script>
   <script src="js/prod-input.js"></script>
 </body>
 </html>

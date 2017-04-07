@@ -54,7 +54,7 @@ $(document).ready(function() {
   // 计算育成部人力
   localStorage.setItem('m_um', m_um);// 部数
   localStorage.setItem('m_um-mult-15', m_um*15);// 直辖组人力
-  localStorage.getItem('um_um', zjrl*9*m_um);// 育成组人力
+  localStorage.setItem('um_um', zjrl*9*m_um);// 育成组人力
   localStorage.setItem('hj2', hj2);// 育成部未来人力
 
   var rank = "";
@@ -70,7 +70,7 @@ $(document).ready(function() {
 
   // 数据填充
   $('#rank').html(localStorage.getItem('rank'));
-  $('#total').html(localStorage.getItem('total'));
+  $('#hj').html(localStorage.getItem('hj'));
   $('#hj1').html(localStorage.getItem('hj1'));
   $('#m_um').html(localStorage.getItem('m_um'));
   $('#hj2').html(localStorage.getItem('hj2'));
