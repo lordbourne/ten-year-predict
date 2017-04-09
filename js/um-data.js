@@ -1,17 +1,17 @@
 $(document).ready(function() {
-  var f_zxz = parseInt(localStorage.getItem('zxzrs'));
-  var f_m_as = parseInt(localStorage.getItem('m_as'));
+  var f_zxz   = parseInt(localStorage.getItem('zxzrs'));
+  var f_m_as  = parseInt(localStorage.getItem('m_as'));
   var f_as_as = parseInt(localStorage.getItem('as_as'));
-  var f_m_ss = parseInt(localStorage.getItem('m_ss'));
+  var f_m_ss  = parseInt(localStorage.getItem('m_ss'));
   var f_ss_as = parseInt(localStorage.getItem('ss_as'));
-  var f_hj1 = parseInt(localStorage.getItem('hj1'));
-  var f_m_um = parseInt(localStorage.getItem('m_um'));
+  var f_hj1   = parseInt(localStorage.getItem('hj1'));
+  var f_m_um  = parseInt(localStorage.getItem('m_um'));
   var f_um_um = parseInt(localStorage.getItem('um_um'));
-  var f_hj2 = parseInt(localStorage.getItem('hj2'));
-  var f_hj = parseInt(localStorage.getItem('hj'));
-  var f_sy = parseInt(localStorage.getItem('sy'));
+  var f_hj2   = parseInt(localStorage.getItem('hj2'));
+  var f_hj    = parseInt(localStorage.getItem('hj'));
+  var f_sy    = parseInt(localStorage.getItem('sy'));
 
-  var nsr = parseInt(localStorage.getItem('nsr')) / 10000;
+  var nsr     = parseInt(localStorage.getItem('nsr')) / 10000;
 
   var h = new Array(14),
       hb = new Array(14),
@@ -20,20 +20,18 @@ $(document).ready(function() {
   h[1] = Math.round(f_zxz * 0.308 * 10000) / 10000.0;// f_zxz * 0.28 * 1.1
   h[2] = Math.round((f_m_as + f_as_as) * 0.176 * 10000) / 10000.0;// (f_m_as + f_as_as) * (0.3-0.12) * 1.1
   h[3] = Math.round((f_m_ss + f_ss_as) * 0.11 * 10000) / 10000.0;// (f_m_ss + f_ss_as) * (0.3-0.18) * 1.1
-  h[4] = Math.round(f_hj2*0.07*10000)/10000.0;//f_hj2*(0.3-0.23)
+  h[4] = Math.round(f_hj2 * 0.07 * 10000)/10000.0;//f_hj2*(0.3-0.23)
   h[5] = Math.round(f_m_as * 0.06 * 10000) / 10000.0;// f_m_as * 0.06
   h[6] = Math.round((f_m_ss + f_ss_as) * 0.03 * 10000) / 10000.0;// (f_m_ss + f_ss_as) * 0.03
   h[7] = Math.round(f_hj2 * 0.015 * 10000) / 10000.0;// hj2 * 0.015
-  h[8] = Math.round(0.35 * 10000) / 10000.0;// 3500/10000 + äººåŠ›åŠç”Ÿäº§åŠ›!K18 * 4%
-  h[9] = Math.round((f_hj1 * 0.0308) * 10000) / 10000.0;// äººåŠ›åŠç”Ÿäº§åŠ›!G18 * 2.8% * 110%
+  h[8] = Math.round(0.35 * 10000) / 10000.0;// 3500/10000 + ÈËÁ¦¼°Éú²úÁ¦!K18 * 4%
+  h[9] = Math.round((f_hj1 * 0.0308) * 10000) / 10000.0;// ÈËÁ¦¼°Éú²úÁ¦!G18 * 2.8% * 110%
   h[10] = f_sy / 10000;
   h[11] = h[10] * 0.8;
-
 //---------
   h[4] = Math.round(f_hj2 * 0.07 * 10000) / 10000.0; //f_hj2*(0.3-0.23)
   h[12] = h[10]; //IF(C15*10000>=5000,9%,IF(C15*10000>=3000,7%,IF(C15*10000>=1500,4.5%,IF(C15*10000>=800,2.5%,0))))*110%
 //-------
-
   if (h[12] >= 0.5) {
       h[12] = h[10] * 0.09;
   } else if (h[12] >= 0.3) {
@@ -49,13 +47,13 @@ $(document).ready(function() {
 
   for (var i=1; i<=12; i++) {
     var $h = $('#h' + i);
-    hb[i] = Math.round(h[i] * 100) / 100.0;// æœˆæ”¶å…¥
+    hb[i] = Math.round(h[i] * 100) / 100.0;// ÔÂÊÕÈë
     $h.find('span').filter(':eq(0)').html(hb[i]);
-    hc[i] = Math.round(hb[i] * 12 * 100) / 100.0;// å¹´æ”¶å…¥
+    hc[i] = Math.round(hb[i] * 12 * 100) / 100.0;// ÄêÊÕÈë
     $h.find('span').filter(':eq(1)').html(hc[i]);
   }
 
-  // æ±‚å’Œå‡½æ•°, å°†æ•°ç»„çš„æŸä¸ªè¿žç»­çš„åŒºé—´çš„å€¼ç›¸åŠ 
+  // ÇóºÍº¯Êý, ½«Êý×éµÄÄ³¸öÁ¬ÐøµÄÇø¼äµÄÖµÏà¼Ó
   var sum = function (arr, from, to) {
     var s = 0;
     for (var i=from; i<=to; i++) {
@@ -63,40 +61,38 @@ $(document).ready(function() {
     }
     return s;
   };
-  // ç»“æžœè½¬æ¢ï¼šMath.round(x*100)/100.0;
+  // ½á¹û×ª»»£ºMath.round(x*100)/100.0;
   var conv = function (x) {
     return Math.round(x*100)/100.0;
   };
-  // æ±‚å’Œå¹¶è½¬æ¢
+  // ÇóºÍ²¢×ª»»
   var sumConv = function (arr, from, to) {
     return conv(sum(arr, from, to));
-  }
+  };
 
-  // ç»„ç»‡åˆ©ç›Šåˆè®¡
+  // ×éÖ¯ÀûÒæºÏ¼Æ
   hb[13] = sumConv(hb, 1, 9);
   hc[13] = sumConv(hb, 1, 9);
   $('#h13').find('span[data-h13_m]').html(hb[13]);
   $('#h13').find('span[data-h13_y]').html(hc[13]);
 
-  // ç®¡ç†æ´¥è´´åˆè®¡
+  // ¹ÜÀí½òÌùºÏ¼Æ
   $('#gljt').find('span[data-gljt_m]').html(sumConv(hb, 1, 4));
   $('#gljt').find('span[data-gljt_y]').html(sumConv(hc, 1, 4));
-  // è‚²æˆæ´¥è´´åˆè®¡
+  // Óý³É½òÌùºÏ¼Æ
   $('#ycjt').find('span[data-ycjt_m]').html(sumConv(hb, 5, 7));
   $('#ycjt').find('span[data-ycjt_y]').html(sumConv(hc, 5, 7));
-  // ä¸ªäººåˆ©ç›Šåˆè®¡
+  // ¸öÈËÀûÒæºÏ¼Æ
   $('#grly').find('span[data-grly_m]').html(sumConv(hb, 10, 12));
   $('#grly').find('span[data-grly_y]').html(sumConv(hc, 10, 12));
-  // æ€»è®¡
+  // ×Ü¼Æ
   $('#total').find('span[data-total_m]').html(sumConv(hb, 1, 12));
   $('#total').find('span[data-total_y]').html(sumConv(hc, 1, 12));
 
-  var nsr_cur = conv(nsr);// ç›®å‰å¹´æ”¶å…¥
-  var nsr_10 = sum(hc, 1, 12);// 10å¹´åŽå¹´æ”¶å…¥
-  var nsr_diff = conv(sum(hc, 1, 12) - nsr);// æé«˜äº†
+  var nsr_cur = conv(nsr);// Ä¿Ç°ÄêÊÕÈë
+  var nsr_10 = sum(hc, 1, 12);// 10ÄêºóÄêÊÕÈë
+  var nsr_diff = conv(sum(hc, 1, 12) - nsr);// Ìá¸ßÁË
   $('#nsr_cur').html(nsr_cur);
   $('#nsr_10').html(nsr_10);
   $('#nsr_diff').html(nsr_diff);
 });
-
-

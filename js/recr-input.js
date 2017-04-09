@@ -3,7 +3,6 @@ $(document).ready(function() {
   $('#data-input input').each(function(index, el) {
     $(this).val(localStorage.getItem($(this)[0].name));
   });
-
   // 错误检测，失焦检测
   var checkInput = function() {
     var b = /^[1-9]*[1-9][0-9]*$/;
@@ -69,7 +68,6 @@ $(document).ready(function() {
     }
     return true;
   };
-
   checkInput();
   $('#setdata').click(function(event) {
     event.preventDefault();
