@@ -57,19 +57,19 @@ $(document).ready(function() {
   localStorage.setItem('um_um', zjrl*9*m_um);// 育成组人力
   localStorage.setItem('hj2', hj2);// 育成部未来人力
 
-  var rank = "";
+  var agtype = "";
   if (m_um >= 2) {
-    rank = "AD";
+    agtype = "AD";
   } else if (m_as+m_ss+as_as+ss_as >= 5) {
-    rank = "UM";
+    agtype = "UM";
   } else {
-    rank = "";
+    agtype = "";
   }
-  localStorage.setItem('rank', rank);// 职级
+  localStorage.setItem('agtype', agtype);// 职级
   localStorage.setItem('hj', hj1 + hj2);// 团队总人数
 
   // 数据填充
-  $('#rank').html(localStorage.getItem('rank'));
+  $('#agtype').html(localStorage.getItem('agtype'));
   $('#hj').html(localStorage.getItem('hj'));
   $('#hj1').html(localStorage.getItem('hj1'));
   $('#m_um').html(localStorage.getItem('m_um'));

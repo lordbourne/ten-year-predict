@@ -4,12 +4,14 @@ $(document).ready(function() {
   // if (typeof localStorage.agntname == "undefined") {
     $.ajax({
       // url: 'http://10.12.1.88/Query/servlet/com.base.JsonDataServlet',
-      url: 'http://taikangsc.com:9080/bip/servlet/com.base.JsonDataServlet',
+      // url: 'http://taikangsc.com:9080/bip/servlet/com.base.JsonDataServlet',
+      url: './resource/test.json',// 测试，直接在本地请求
       type: 'GET',
-      dataType: 'jsonp',
-      data: {
-        agntnum: agntnum
-      },
+      // dataType: 'jsonp',
+      dataType: 'json',
+      // data: {
+      //   agntnum: agntnum
+      // },
       beforeSend:function(XMLHttpRequest){
         $('#page').hide();
         $('body').append('<div class="spinner" id="spinner"></div>'); //在后台返回success之前显示loading图标
