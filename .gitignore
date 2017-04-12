@@ -4,3 +4,4 @@ sncomp/
 *.zip
 resource/
 res/
+*test*/
