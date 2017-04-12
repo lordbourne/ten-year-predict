@@ -44,7 +44,9 @@ $(document).ready(function() {
 
   function getFyc(key, kdl, rjfyc) {
     var t = parseInt(localStorage.getItem(key));
-    return Math.round(t*kdl/100*rjfyc/10000*100)/100.0;
+    var t1 = Math.floor(t*kdl/100);
+    var t2 = Math.round(t1*rjfyc/10000*100);
+    return t2/100.0;
   }
   function fillFyc(jqObj, fyc) {
     for (key in fyc) {
@@ -65,29 +67,42 @@ $(document).ready(function() {
                 ];
   var fyc = [];
   for (key in fycKey) {
-    fyc[fycKey[key]] = getFyc(fycKey[key], kdl, rjfyc);
+    var tmp = getFyc(fycKey[key], kdl, rjfyc);
+    fyc[fycKey[key]] = tmp;
+    localStorage[fycKey[key] + "_fyc"] = tmp;
   }
-  // FYC 数据的填充
-  $zxbData = $('#zxb table span');
-  $ycbData = $('#ycb table span');
-  fillFyc($zxbData, fyc);
-  fillFyc($ycbData, fyc);
-  $('#hj_fyc').html(fyc.hj);
-  $('#hj1_fyc').html(fyc.hj1);
-  $('#hj2_fyc').html(fyc.hj2);
+  // // FYC 数据的填充
+  // $zxbData = $('#zxb table span');
+  // $ycbData = $('#ycb table span');
+  // fillFyc($zxbData, fyc);
+  // fillFyc($ycbData, fyc);
+  // $('#hj_fyc').html(fyc.hj);
+  // $('#hj1_fyc').html(fyc.hj1);
+  // $('#hj2_fyc').html(fyc.hj2);
 
-  // 其他数据
-  function fillLocal(jqObj) {
-    for (key in localStorage) {
-      jqObj.filter('[data-' + key + ']').html(localStorage[key]);
+  // // 其他数据
+  // function fillLocal(jqObj) {
+  //   for (key in localStorage) {
+  //     jqObj.filter('[data-' + key + ']').html(localStorage[key]);
+  //   }
+  // }
+  // fillLocal($zxbData);
+  // fillLocal($ycbData);
+  // $('#hj').html(localStorage.hj);
+  // $('#hj1').html(localStorage.hj1);
+  // $('#hj2').html(localStorage.hj2);
+
+  // 获取模板
+  $.ajax({
+    url: 'tpl/tpl-prod-data.html',
+    type: 'GET',
+    dataType: 'html',
+    success: function (tpl) {
+      var html = fillData(tpl, localStorage);
+      $('#page').html(html);
     }
-  }
-  fillLocal($zxbData);
-  fillLocal($ycbData);
-  $('#hj').html(localStorage.hj);
-  $('#hj1').html(localStorage.hj1);
-  $('#hj2').html(localStorage.hj2);
+  });
 
   // 数据存储
-  localStorage.setItem('fyc', JSON.stringify(fyc)); // 后面取出用的时候要用 JSON.parse()
+  // localStorage.setItem('fyc', JSON.stringify(fyc)); // 后面取出用的时候要用 JSON.parse()
 });

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width= , user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>收入情况</title>
+  <!-- flatui -->
+  <!-- <link href="flatui/dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!-- <link href="flatui/dist/css/flat-ui.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="../flatui/dist/css/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/buttons.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/inco-data.css">
+
+</head>
+
+<body>
+  <div class="page" id="page"><!-- 此标签用于数据未加载好时隐藏页面 -->
+    <header>
+      <p class="income-info">
+        您最近一年的总收入为
+      </p>
+      <h1 class="income txt-data">
+        {{nsr}} 万元
+      </h1>
+    </header>
+    <section class="myinfo">
+      <h1 class="tbl-caption">我的信息</h1>
+      <table class="table">
+        <tr>
+          <td>工&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</td>
+          <td><span>{{agntnum}}</span></td>
+        </tr>
+        <tr>
+          <td>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</td>
+          <td><span>{{agntname}}</span></td>
+        </tr>
+        <tr>
+          <td>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级</td>
+          <td><span>{{agtype}}</span></td>
+        </tr>
+        <tr>
+          <td>入司时间</td>
+          <td><span>{{dteapp}}</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="myteam">
+      <h1 class="tbl-caption">我的团队</h1>
+      <table class="table">
+        <tr>
+          <td colspan="2">直辖组现有人力</td>
+          <td>{{zxzrs}}人</td>
+        </tr>
+        <tr>
+          <td colspan="2">直辖部现有人力</td>
+          <td>{{zxbrs}}人</td>
+        </tr>
+        <tr>
+          <td colspan="2">所辖人力</td>
+          <td>{{sxrs}}人</td>
+        </tr>
+        <tr>
+          <td rowspan="4">直辖主管数</td>
+          <td>直辖 AS</td>
+          <td>{{zxas}}</td>
+        </tr>
+        <tr>
+          <td>直辖 SS</td>
+          <td>{{zxss}}</td>
+        </tr>
+        <tr>
+          <td>直辖 UM</td>
+          <td>{{zxum}}</td>
+        </tr>
+        <tr>
+          <td>育成 AD</td>
+          <td>{{zxad}}</td>
+        </tr>
+      </table>
+      <p class="note">
+        说明：以上直辖主管数中，若直辖职级与您当前职级一致，系统自动显示为您的同级育成主管数。
+      </p>
+    </section>
+    <footer class="predict">
+      <p>您对目前的收入满意吗？让我们一起来预测一下未来 10 年组织发展带来的收入吧!</p>
+      <a id="followme" href="recr-input.html" class="button button-action button-pill">follow me</a>
+    </footer>
+  </div>
+
+  <script src="../js/jquery.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="tpl-inco-data.js"></script>
+</body>
+
+</html>
