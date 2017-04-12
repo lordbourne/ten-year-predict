@@ -3,70 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width= , user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>十年后的增员情况</title>
+  <link href="flatui/dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/buttons.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/recr-data.css">
 </head>
 <body>
-  <header>
-    <img src="img/myteam.png" alt="">
-  </header>
-
-  <section>
-    <h1>您的职级为 <span id="rank" data-rank></span>，团队总人数达到 <span id="total" data-total></span> 人</h1>
-  </section>
-
-  <section id="zxb">
-    <h2>
-      直辖部增员情况
-    </h2>
-    <table>
-      <tr>
-        <td colspan="2">直辖组</td>
-        <td ><span data-m_zxzrs>24</span>人</td>
-      </tr>
-      <tr>
-        <td rowspan="2">育成AS</td>
-        <td>直辖组</td>
-        <td> <span data-zjrl></span>人x<span data-m_as></span>组 = <span data-zjrl-mult-m_as></span>人</td>
-      </tr>
-      <tr>
-        <td>育成组</td>
-        <td><span data-zjrl></span>人x<span data-as_as></span>组 = <span data-zjrl-mult-as_as></span>人</td>
-      </tr>
-      <tr>
-        <td rowspan="2">育成 SS</td>
-        <td>直辖组</td>
-        <td><span data-zjrl></span>人x<span data-m_ss></span>组 = <span data-zjrl-mult-m_ss></span>人</td>
-      </tr>
-      <tr>
-        <td>育成组</td>
-        <td><span data-zjrl></span>人x<span data-ss_as></span>组 = <span data-zjrl-mult-ss_as></span>人</td>
-      </tr>
-    </table>
-    <p>直辖部共计 <span id="hj1" data-hj1></span> 人</p>
-  </section>
-
-  <section id="ycb">
-    <h2>育成部增员情况</h2>
-    <table>
-      <tr>
-        <td>直辖组</td>
-        <td><span data-zjrl></span>人x<span data-m_um></span>部 = <span data-m_um-mult-15></span>人</td>
-      </tr>
-      <tr>
-        <td>育成组</td>
-        <td><span data-zjrl></span>人×9组×<span data-m_um></span>部=<span data-zjrl-mult-9-mult-m_um></span>人</td>
-      </tr>
-    </table>
-    <p>育成部共 <span id="m_um" data-m_um></span> 部，共计 <span id="hj2" data-hj2></span> 人</p>
-  </section>
-
-  <footer>
-    <a class="btn" id="setdata" href="prod-input.html">生产力测算</a>
-  </footer>
+  <div id="page"></div>
 
   <script src="js/jquery.js"></script>
+  <script src="js/common.js"></script>
   <script src="js/recr-data.js"></script>
 </body>
 </html>

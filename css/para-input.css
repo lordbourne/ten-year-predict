@@ -3,30 +3,24 @@
 */
 header {
   text-align: center;
-  padding-top: 70px;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
 }
 header img {
   width: 50%;
 }
-main {
-  padding-top: 20px;
-  padding-bottom: 50px;
-}
-main form table {
+main table {
   width: 80%;
 }
-main form table caption {
-  font-size: 40px;
-  padding-bottom: 20px;
+main table caption {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-main form table input {
-  height: 45px;
-  border-radius: 5px;
-  font-size: 34px;
-  max-width: 150px;
+main table input {
+  // max-width: 40px;
 }
 footer {
-  padding-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
 }

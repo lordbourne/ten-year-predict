@@ -49,15 +49,39 @@ table {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
-table thead {
-  border-bottom: 1px solid #000;
+.txt-data {
+  color: #ff8400;
 }
-table td {
-  padding: 10px;
-  font-size: 30px;
+.tbl-head {
+  background-color: #9DD929!important;
+}
+.tbl-caption {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: #f0f0f0;
+  color: #aaa;
+}
+table tbody {
+  color: #666;
+}
+table thead tr {
+  background-color: #9DD929!important;
+}
+table tbody tr:nth-child(odd) {
+  background-color: #DEF3CA!important;
+}
+footer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+input {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  text-indent: 8px;
 }
 /* 加载特效样式 */
 .spinner {

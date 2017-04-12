@@ -16,21 +16,21 @@ $(document).ready(function() {
   // 1.晋升AS人数
   var temp1 = zxzrs + zjzy*lcv13*10;  // 目前直辖组人力+直接增员人数*13个月留存率*10年
   // 未来育成AS人数
-  var as = Math.round(temp1/5);
+  var as = Math.floor(Math.round(temp1)/5);
   // 未来育成SS人数
-  var ss = Math.round((as + zxas)/3);
+  var ss = Math.floor((as + zxas)/3);
   // 未来育成UM人数
-  var um = Math.round((ss + zxss)/3);
+  var um = Math.floor((ss + zxss)/3);
   // 未来育成UM人数
-  var ad = Math.round((um + zxum)/3);
+  var ad = Math.floor((um + zxum)/3);
   // 直辖组人力
   var m_zxzrs = Math.round((temp1 - as)*lcv25);
   // AS人数 = 现有AS人数 + 未来育成AS人数 - 晋升SS人数 - 脱落AS人数（脱落AS默认为30%）
-  var m_as = Math.round((zxas + as - ss)*7/10);
-  var as_as = Math.round(m_as/3);
+  var m_as = Math.floor((zxas + as - ss)*7/10);
+  var as_as = Math.floor(m_as/3);
   // SS人数 = 现有SS人数 + 未来育成SS人数 - 晋升UM人数
-  var m_ss = Math.round((zxss + ss - um)*9/10);
-  var ss_as = Math.round(m_ss*2);
+  var m_ss = Math.floor((zxss + ss - um)*9/10);
+  var ss_as = m_ss*2;
   // UM人数 = 现有UM人数 + 未来育成UM人数
   var m_um = zxum + um;
   var hj1 = m_zxzrs + zjrl*m_as + zjrl*as_as + zjrl*m_ss + zjrl*ss_as;
@@ -54,35 +54,49 @@ $(document).ready(function() {
   // 计算育成部人力
   localStorage.setItem('m_um', m_um);// 部数
   localStorage.setItem('m_um-mult-15', m_um*15);// 直辖组人力
-  localStorage.getItem('um_um', zjrl*9*m_um);// 育成组人力
+  localStorage.setItem('um_um', zjrl*9*m_um);// 育成组人力
   localStorage.setItem('hj2', hj2);// 育成部未来人力
 
-  var rank = "";
+  var agtype = "";
   if (m_um >= 2) {
-    rank = "AD";
+    agtype = "AD";
   } else if (m_as+m_ss+as_as+ss_as >= 5) {
-    rank = "UM";
+    agtype = "UM";
   } else {
-    rank = "";
+    agtype = "";
   }
-  localStorage.setItem('rank', rank);// 职级
+  localStorage.setItem('agtype', agtype);// 职级
   localStorage.setItem('hj', hj1 + hj2);// 团队总人数
 
-  // 数据填充
-  $('#rank').html(localStorage.getItem('rank'));
-  $('#total').html(localStorage.getItem('total'));
-  $('#hj1').html(localStorage.getItem('hj1'));
-  $('#m_um').html(localStorage.getItem('m_um'));
-  $('#hj2').html(localStorage.getItem('hj2'));
+  // 获取模板并填充数据
+  $.ajax({
+    url: 'tpl/tpl-recr-data.html',
+    type: 'GET',
+    dataType: 'html',
+    success: function (tpl) {
+      var html = fillData(tpl, localStorage);
+      $('#page').html(html);
+    }
+  });
 
-
-  $zxbData = $('#zxb table span');
-  for (key in localStorage) {
-    $zxbData.filter('[data-' + key + ']').html(localStorage[key]);
-  }
-  $ycbData = $('#ycb table span');
-  for (key in localStorage) {
-    $ycbData.filter('[data-' + key + ']').html(localStorage[key]);
-  }
-
+  // 有改动的数据
+  localStorage.setItem('m_um', m_um*15);// 部数
+  localStorage.setItem("um_um", zjrl*9*m_um);
 });
+
+
+// // 利用 data 属性填充数据
+// $('#agtype').html(localStorage.getItem('agtype'));
+// $('#hj').html(localStorage.getItem('hj'));
+// $('#hj1').html(localStorage.getItem('hj1'));
+// $('#m_um').html(localStorage.getItem('m_um'));
+// $('#hj2').html(localStorage.getItem('hj2'));
+
+// $zxbData = $('#zxb table span');
+// for (key in localStorage) {
+//   $zxbData.filter('[data-' + key + ']').html(localStorage[key]);
+// }
+// $ycbData = $('#ycb table span');
+// for (key in localStorage) {
+//   $ycbData.filter('[data-' + key + ']').html(localStorage[key]);
+// }

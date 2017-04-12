@@ -1,1 +1,6 @@
 sncomp/
+*.sublime-projct
+*.sublime-workspace
+*.zip
+resource/
+res/
