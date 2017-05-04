@@ -21,7 +21,7 @@ $(document).ready(function() {
         console.log(data);
         // 未请求到数据
         if (!data) {
-          alert('未请求到数据');
+          alert('没有此编号的在职代理人');
           window.location.href = "inco-input.html";
         }
         // 获取模板并加载数据

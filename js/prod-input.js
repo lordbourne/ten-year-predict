@@ -118,7 +118,7 @@ $(document).ready(function() {
   //     return true;
   //   });
   // };
-  checkInput();
+  // checkInput();
   $('#setdata').click(function(event) {
     event.preventDefault();
     // console.log(checkInputAgain());

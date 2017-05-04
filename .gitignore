@@ -1,7 +1,8 @@
 sncomp/
-*.sublime-projct
+*.sublime-project
 *.sublime-workspace
 *.zip
 resource/
 res/
+node_modules/
 test*/

@@ -10,7 +10,7 @@ $(document).ready(function() {
       $(this).blur(function(event) {
         var tmp = $(this).val();
         if (index == 0) {
-          if (!b.test(tmp) || parseInt(tmp) < 1 || parseInt(tmp) > 50) {
+          if (!b.test(tmp) || parseInt(tmp) < 1 || parseInt(tmp) > 1000) {
             $(this).val("").focus();
             alert("每年个人直接增员数必须是正整数且在数值区间内！");
             return false;
@@ -28,7 +28,7 @@ $(document).ready(function() {
             return false;
           }
         } else if (index == 3) {
-          if (!b.test(tmp) || parseInt(tmp) < 1 || parseInt(tmp) > 50) {
+          if (!b.test(tmp) || parseInt(tmp) < 1 || parseInt(tmp) > 1000) {
             $(this).val("").focus();
             alert("10 年后团队组均人力必须是正整数且在数值区间内！");
             return false;
@@ -43,7 +43,7 @@ $(document).ready(function() {
     var b = /^[1-9]*[1-9][0-9]*$/;
     var tmp = "";
     tmp = $('#data-input input').filter(':eq(0)').val();
-    if (!b.test(tmp) || parseInt(tmp) < 1 || parseInt(tmp) > 50) {
+    if (!b.test(tmp) || parseInt(tmp) < 1 || parseInt(tmp) > 1000) {
       alert("每年个人直接增员数必须是正整数且在数值区间内！");
       $(this).val("").focus();
       return false;
@@ -61,14 +61,14 @@ $(document).ready(function() {
       return false;
     }
     tmp = $('#data-input input').filter(':eq(3)').val();
-    if (!b.test(tmp) || parseInt(tmp) < 1 || parseInt(tmp) > 50) {
+    if (!b.test(tmp) || parseInt(tmp) < 1 || parseInt(tmp) > 1000) {
       $(this).val("").focus();
       alert("10 年后团队组均人力必须是正整数且在数值区间内！");
       return false;
     }
     return true;
   };
-  checkInput();
+  // checkInput();
   $('#setdata').click(function(event) {
     event.preventDefault();
     if (checkInputAgain()) {
