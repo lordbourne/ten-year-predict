@@ -92,7 +92,7 @@ $(document).ready(function() {
 // 构造 Json 数据用于填充
   var result  = {};
   result.nsr_cur = conv(nsr);// 目前年收入
-  result.nsr_10 = sum(hc, 1, 12);// 10年后年收入
+  result.nsr_10 = sum(hc, 1, 12).toFixed(2);// 10年后年收入
   result.nsr_diff = conv(sum(hc, 1, 12) - nsr);// 提高了
 
   result.h1b  = hb[1];
