@@ -1,4 +1,13 @@
 $(document).ready(function() {
+  // Focus state for append/prepend inputs
+  $('.input-group')
+  .on('focus', '.form-control', function () {
+    $(this).closest('.input-group, .form-group').addClass('focus');
+  })
+  .on('blur', '.form-control', function () {
+    $(this).closest('.input-group, .form-group').removeClass('focus');
+  });
+
   // 如果曾经输入过表单，就直接利用本地存储方式填充表单
   $('#agntnum-input').val(function() {
     return localStorage.getItem($(this).attr('name'));
